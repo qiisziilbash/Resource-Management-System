@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="systemConfigurationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.admin.SystemConfigurationView">
+   <children>
+      <Button fx:id="configureButton" layoutX="660.0" layoutY="540.0" mnemonicParsing="false" onAction="#configure" text="Configure">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="backupTeypesCombo" layoutX="447.0" layoutY="87.0" prefHeight="25.0" prefWidth="288.0" />
+      <Label fx:id="usernameLabel1" layoutX="40.0" layoutY="70.0" prefHeight="59.0" prefWidth="150.0" text="Backup Type: ">
+         <effect>
+            <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel13" layoutX="40.0" layoutY="130.0" prefHeight="59.0" prefWidth="272.0" text="Backup Period (In Days):">
+         <effect>
+            <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="backupPeriodDays" layoutX="447.0" layoutY="147.0" prefHeight="25.0" prefWidth="288.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Label fx:id="usernameLthxgabel2" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="365.0" text="Configure System" textFill="#bf1c1c">
+         <effect>
+            <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

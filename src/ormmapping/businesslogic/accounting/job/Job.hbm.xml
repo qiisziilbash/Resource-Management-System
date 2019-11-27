@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="businesslogic.accounting.job.Job" table="Job" lazy="false" discriminator-value="Job">
+		<id name="ID" column="ID" type="integer" unsaved-value="0">
+			<generator class="native">
+			</generator>
+		</id>
+		<discriminator column="Discriminator" type="string"/>
+		<set name="ORM_UserJobs" lazy="false" cascade="save-update,lock" inverse="false">
+			<key column="JobID" not-null="false"/>
+			<one-to-many class="businesslogic.accounting.job.UserJob"/>
+		</set>
+		<subclass name="businesslogic.accounting.job.ProjectManagement" discriminator-value="ProjectManagement" lazy="false">
+			<set name="ORM_InformationResources" lazy="false" cascade="save-update,lock" inverse="true">
+				<key column="JobID3" not-null="false"/>
+				<one-to-many class="businesslogic.distribution.resource.InformationResource"/>
+			</set>
+			<set name="ORM_Specialties" lazy="false" cascade="save-update,lock" inverse="false">
+				<key column="JobID2" not-null="false"/>
+				<one-to-many class="businesslogic.accounting.job.Specialty"/>
+			</set>
+			<set name="ORM_Requirements" lazy="false" cascade="save-update,lock" inverse="false">
+				<key column="JobID" not-null="false"/>
+				<one-to-many class="businesslogic.distribution.requirement.Requirement"/>
+			</set>
+			<set name="ORM_Notification" lazy="false" cascade="save-update,lock" inverse="false">
+				<key column="JobID" not-null="true"/>
+				<one-to-many class="businesslogic.utility.Notification"/>
+			</set>
+		</subclass>
+		<subclass name="businesslogic.accounting.job.ResourceManagement" discriminator-value="ResourceManagement" lazy="false">
+			<set name="ORM_Resources" lazy="false" cascade="save-update,lock" inverse="false">
+				<key column="JobID2" not-null="false"/>
+				<one-to-many class="businesslogic.distribution.resource.Resource"/>
+			</set>
+			<set name="ORM_Allocation_s" lazy="false" cascade="save-update,lock" inverse="false">
+				<key column="JobID" not-null="true"/>
+				<one-to-many class="businesslogic.distribution.Allocation"/>
+			</set>
+		</subclass>
+		<subclass name="businesslogic.accounting.job.Programming" discriminator-value="Programming" lazy="false">
+			<set name="ORM_Specialties" lazy="false" cascade="save-update,lock" inverse="false">
+				<key column="JobID" not-null="false"/>
+				<one-to-many class="businesslogic.accounting.job.Specialty"/>
+			</set>
+			<set name="ORM_Modules" lazy="false" cascade="save-update,lock" inverse="false">
+				<key column="JobID4" not-null="false"/>
+				<one-to-many class="businesslogic.distribution.resource.Module"/>
+			</set>
+			<set name="ORM_ModuleChanges" lazy="false" cascade="save-update,lock" inverse="false">
+				<key column="JobID" not-null="true"/>
+				<one-to-many class="businesslogic.distribution.resource.ModuleChange"/>
+			</set>
+		</subclass>
+	</class>
+</hibernate-mapping>

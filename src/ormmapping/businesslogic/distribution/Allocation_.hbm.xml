@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="businesslogic.distribution.Allocation" table="Allocation" lazy="false">
+		<id name="ID" column="ID" type="integer" unsaved-value="0">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="allocated" column="Allocated" type="boolean" not-null="true" lazy="false"/>
+		<set name="ORM_Requirements" lazy="true" cascade="save-update,lock" inverse="false">
+			<key column="`Allocation ID`" not-null="false"/>
+			<one-to-many class="businesslogic.distribution.requirement.Requirement"/>
+		</set>
+		<set name="ORM_ResourceAllocations" lazy="true" cascade="save-update,lock" inverse="false">
+			<key column="`Allocation ID`" not-null="false"/>
+			<one-to-many class="businesslogic.distribution.ResourceAllocation"/>
+		</set>
+	</class>
+</hibernate-mapping>

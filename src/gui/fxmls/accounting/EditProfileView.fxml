@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.accounting.EditProfileView">
+   <children>
+      <AnchorPane fx:id="jobAdditionPane" layoutX="2000.0" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Label fx:id="usernameLabel11" layoutX="14.0" layoutY="90.0" prefHeight="59.0" prefWidth="134.0" text="Job Type:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="singleJobAddButton" layoutX="664.0" layoutY="542.0" mnemonicParsing="false" onAction="#singleJobAddButtonPressed" prefHeight="22.0" prefWidth="72.0" text="Add">
+               <effect>
+                  <InnerShadow color="#003eff" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="jobTypeCombo" layoutX="450.0" layoutY="107.0" prefHeight="25.0" prefWidth="260.0" />
+            <ListView fx:id="jobsListViewInJobAddition" layoutX="450.0" layoutY="198.0" prefHeight="213.0" prefWidth="260.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ListView>
+            <ImageView fx:id="backFromJobAdditionIcon" fitHeight="59.0" fitWidth="36.0" layoutX="11.0" layoutY="529.0" onMouseClicked="#backFromJobAdditionPressed" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/back.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="singleJobRemoveButton" layoutX="580.0" layoutY="542.0" mnemonicParsing="false" onAction="#singleJobRemoveButtonPressed" prefHeight="22.0" prefWidth="72.0" text="Remove">
+               <effect>
+                  <InnerShadow color="#003eff" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signUpPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Label fx:id="passwordLabel1" layoutX="40.0" layoutY="130.0" prefHeight="59.0" prefWidth="134.0" text="Password:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="registerButton" layoutX="664.0" layoutY="539.0" mnemonicParsing="false" onAction="#registerButtonPressed" prefHeight="22.0" prefWidth="72.0" text="Register">
+               <effect>
+                  <InnerShadow color="#003eff" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="usernameTextField" layoutX="205.0" layoutY="87.0" prefHeight="25.0" prefWidth="180.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Label fx:id="passwordLabel11" layoutX="398.0" layoutY="130.0" prefHeight="59.0" prefWidth="134.0" text="Confirm:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="passwordTextField" layoutX="196.0" layoutY="147.0" prefHeight="25.0" prefWidth="189.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <TextField fx:id="passwordConfirmationTextField" layoutX="532.0" layoutY="147.0" prefHeight="25.0" prefWidth="189.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <TextField fx:id="emailTextField" layoutX="488.0" layoutY="87.0" prefHeight="25.0" prefWidth="237.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Label fx:id="usernameLa11" layoutX="398.0" layoutY="70.0" prefHeight="59.0" prefWidth="80.0" text="Email:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+            </Label>
+            <ListView fx:id="specialtiesListView" layoutX="42.0" layoutY="253.0" prefHeight="223.0" prefWidth="323.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ListView>
+            <ListView fx:id="jobsListView" layoutX="394.0" layoutY="253.0" prefHeight="223.0" prefWidth="323.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ListView>
+            <Button fx:id="addJobButton" layoutX="559.0" layoutY="539.0" mnemonicParsing="false" onAction="#addJobButtonPressed" prefHeight="22.0" prefWidth="96.0" text="Edit Jobs">
+               <effect>
+                  <InnerShadow color="#003eff" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="addSpecialtyButton" layoutX="446.0" layoutY="539.0" mnemonicParsing="false" onAction="#addSpecialtyButtonPressed" text="Edit Specialty">
+               <effect>
+                  <InnerShadow color="#003eff" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="usernameLabel1111" layoutX="42.0" layoutY="190.0" prefHeight="35.0" prefWidth="160.0" text="Specialties:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel11111" layoutX="398.0" layoutY="190.0" prefHeight="35.0" prefWidth="160.0" text="Jobs:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel1" layoutX="40.0" layoutY="70.0" prefHeight="59.0" prefWidth="134.0" text="Username:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLashzhszbel211111" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="132.0" text="Edit Profile" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="specialtyAdditionPane" layoutX="1000.0" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Label fx:id="usernameLabel112" layoutX="40.0" layoutY="90.0" prefHeight="59.0" prefWidth="196.0" text="Specialty Title:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="singleSpecialtyAddButton" layoutX="664.0" layoutY="538.0" mnemonicParsing="false" onAction="#singleSpecialtyAddButtonPressed" prefHeight="22.0" prefWidth="72.0" text="Add">
+               <effect>
+                  <InnerShadow color="#003eff" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <ListView fx:id="specialtiesListViewInSpecialtyAddition" layoutX="367.0" layoutY="212.0" prefHeight="197.0" prefWidth="340.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ListView>
+            <ImageView fx:id="backFromSpecialtyAdditionIcon" fitHeight="59.0" fitWidth="36.0" layoutX="10.0" layoutY="529.0" onMouseClicked="#backFromSpecialtyAdditionPressed" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/back.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="specialtyTitleTextField" layoutX="367.0" layoutY="107.0" prefHeight="25.0" prefWidth="340.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Label fx:id="usernameLabel1121" layoutX="40.0" layoutY="150.0" prefHeight="59.0" prefWidth="196.0" text="Proficiency:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+            </Label>
+            <Slider fx:id="proficiencyLevelSlider" layoutX="367.0" layoutY="166.0" prefHeight="14.0" prefWidth="340.0" />
+            <Button fx:id="singleSpecialtyremoveButton" layoutX="583.0" layoutY="538.0" mnemonicParsing="false" onAction="#singleSpecialtyRemoveButtonPressed" prefHeight="22.0" prefWidth="72.0" text="Remove">
+               <effect>
+                  <InnerShadow color="#003eff" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+Reports                                     ok
+system config                               ok
+accounting requests                         ok
+
+sign up                                     ok
+log in                                      ok
+
+view profile                                ok
+edit profile                                ok
+
+module creation                             ok
+module maintenance                          ok
+
+About                                       ok
+
+PredictEssentialResourcceAllocationView     ok
+RegisterNewResourceView                     ok
+ResourceAllocationView                      ok
+
+AssignModuleView                            ok
+EstimateResourceAllocationView              ok
+RegisterProjectScaleView                    ok
+RegisterRequirementView                     ok
+
+
+
+
+

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.resourcemanager.ResourceRequirementsReportView">
+   <children>
+      <AnchorPane fx:id="resourceRequirementReportPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Button fx:id="getRequirementReportButton1" layoutX="508.0" layoutY="540.0" mnemonicParsing="false" onAction="#viewDigram" prefHeight="22.0" prefWidth="107.0" text="View Diagram">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="getRequirementReportButton" layoutX="633.0" layoutY="540.0" mnemonicParsing="false" onAction="#getRequirementReportPressed" prefHeight="22.0" prefWidth="107.0" text="Get Report">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="informationResourceCombo" layoutX="302.0" layoutY="75.0" prefHeight="25.0" prefWidth="397.0" />
+            <Label fx:id="usernameLabel112" layoutX="40.0" layoutY="55.0" prefHeight="59.0" prefWidth="245.0" text="Information Rwsource:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernamszhfsfheLabel211" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="367.0" text="Resource Requirement Report" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="resultTable" layoutX="35.0" layoutY="134.0" prefHeight="366.0" prefWidth="666.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="diagramPane" layoutX="1010.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Rectangle fx:id="sampleRect" arcHeight="50.0" arcWidth="50.0" fill="#39ff1f42" height="22.0" opacity="0.76" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="200.0">
+               <effect>
+                  <InnerShadow color="#35d115" />
+               </effect>
+            </Rectangle>
+            <AnchorPane fx:id="reqPane1" layoutY="176.0" prefHeight="70.0" prefWidth="750.0">
+               <children>
+                  <Label fx:id="reqLabel1" layoutX="10.0" layoutY="2.0" prefHeight="59.0" prefWidth="155.0" text="none" textAlignment="CENTER" textFill="#bf1c1c">
+                     <effect>
+                        <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+                     </effect>
+                     <font>
+                        <Font name="Cooper Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Line endX="700.0" endY="125.0" layoutX="-1.0" layoutY="-68.0" startX="700.0" startY="75.0" stroke="#2bff00" strokeWidth="5.0" />
+                  <Line endX="200.0" endY="125.0" layoutX="-1.0" layoutY="-68.0" startX="200.0" startY="75.0" stroke="#2bff00" strokeWidth="5.0" />
+                  <Line fx:id="sampleLine" endX="700.0" endY="100.0" fill="#f2040400" layoutX="-1.0" layoutY="-68.0" startX="200.0" startY="100.0" stroke="RED" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="usernameLabel2111" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="367.0" text="Diagram" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="515.0" onMouseClicked="#backFromDiagram" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/back.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="sampleRect" arcHeight="50.0" arcWidth="50.0" fill="#39ff1f42" height="22.0" layoutX="289.0" layoutY="176.0" opacity="0.76" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="200.0">
+               <effect>
+                  <InnerShadow color="#35d115" />
+               </effect>
+            </Rectangle>
+            <Label fx:id="usernameLabel21111" layoutX="383.0" layoutY="106.0" prefHeight="59.0" prefWidth="135.0" text="Time (Day)" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="startLabel" layoutX="160.0" layoutY="106.0" prefHeight="59.0" prefWidth="101.0" text="date" textAlignment="CENTER" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="endLabel" layoutX="649.0" layoutY="106.0" prefHeight="59.0" prefWidth="87.0" text="date" textAlignment="CENTER" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="reqPane2" layoutY="266.0" prefHeight="70.0" prefWidth="750.0">
+               <children>
+                  <Label fx:id="reqLabel2" layoutX="10.0" layoutY="2.0" prefHeight="59.0" prefWidth="155.0" text="none" textAlignment="CENTER" textFill="#bf1c1c">
+                     <effect>
+                        <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+                     </effect>
+                     <font>
+                        <Font name="Cooper Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Line endX="700.0" endY="125.0" layoutX="-1.0" layoutY="-68.0" startX="700.0" startY="75.0" stroke="#2bff00" strokeWidth="5.0" />
+                  <Line endX="200.0" endY="125.0" layoutX="-1.0" layoutY="-68.0" startX="200.0" startY="75.0" stroke="#2bff00" strokeWidth="5.0" />
+                  <Line fx:id="sampleLine1" endX="700.0" endY="100.0" fill="#f2040400" layoutX="-1.0" layoutY="-68.0" startX="200.0" startY="100.0" stroke="RED" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="reqPane3" layoutY="356.0" prefHeight="70.0" prefWidth="750.0">
+               <children>
+                  <Label fx:id="reqLabel3" layoutX="10.0" layoutY="2.0" prefHeight="59.0" prefWidth="155.0" text="none" textAlignment="CENTER" textFill="#bf1c1c">
+                     <effect>
+                        <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+                     </effect>
+                     <font>
+                        <Font name="Cooper Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Line endX="700.0" endY="125.0" layoutX="-1.0" layoutY="-68.0" startX="700.0" startY="75.0" stroke="#2bff00" strokeWidth="5.0" />
+                  <Line endX="200.0" endY="125.0" layoutX="-1.0" layoutY="-68.0" startX="200.0" startY="75.0" stroke="#2bff00" strokeWidth="5.0" />
+                  <Line fx:id="sampleLine2" endX="700.0" endY="100.0" fill="#f2040400" layoutX="-1.0" layoutY="-68.0" startX="200.0" startY="100.0" stroke="RED" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

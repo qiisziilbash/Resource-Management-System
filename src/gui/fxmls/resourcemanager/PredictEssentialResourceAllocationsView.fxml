@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.resourcemanager.PredictEssentialResourceAllocationView">
+   <children>
+      <AnchorPane fx:id="essentialResourcesPredictionPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <TreeView fx:id="projectsTreeView" layoutX="40.0" layoutY="128.0" prefHeight="367.0" prefWidth="686.0" />
+            <Button fx:id="predictButton" layoutX="596.0" layoutY="540.0" mnemonicParsing="false" onAction="#predictPressed" prefHeight="22.0" prefWidth="144.0" text="Predict">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="usernameLabel212111" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="367.0" text="Essential Resources Prediction:" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel11211" layoutX="40.0" layoutY="69.0" prefHeight="59.0" prefWidth="297.0" text="Select a Project:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="predictionResultPane" layoutX="1010.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Button fx:id="predictButton1" layoutX="596.0" layoutY="540.0" mnemonicParsing="false" onAction="#viewProjectPressed" prefHeight="22.0" prefWidth="144.0" text="View Project">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="usernameLabel2121111" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="367.0" text="Prediction Results:" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel112111" layoutX="40.0" layoutY="69.0" prefHeight="59.0" prefWidth="297.0">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <TreeView fx:id="predictedProjectsTreeView" layoutX="59.0" layoutY="94.0" prefHeight="421.0" prefWidth="675.0" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="11.0" layoutY="515.0" onMouseClicked="#backFromPrediction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="projectViewPane" layoutX="2010.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Label fx:id="usernameLabel21211111" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="367.0" text="Project View" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel1121111" layoutX="40.0" layoutY="69.0" prefHeight="59.0" prefWidth="297.0">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <TreeView fx:id="selectedProjectTreeView" layoutX="92.0" layoutY="94.0" prefHeight="386.0" prefWidth="642.0" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="516.0" onMouseClicked="#backFromProjectView" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

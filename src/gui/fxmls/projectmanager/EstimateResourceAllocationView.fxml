@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.projectmanager.EstimateResourceAllocationView">
+   <children>
+      <AnchorPane fx:id="estimateResourceAllocationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Button fx:id="estimateButton" layoutX="608.0" layoutY="540.0" mnemonicParsing="false" onAction="#estimatePressed" prefHeight="22.0" prefWidth="132.0" text="Estimate">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="usernameLabszhzshsel11111" layoutX="40.0" layoutY="55.0" prefHeight="59.0" prefWidth="119.0" text="Start Date:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="EstimateResocatione" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="338.0" text="Estimate Resource Allocation" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel111111" layoutX="40.0" layoutY="115.0" prefHeight="59.0" prefWidth="182.0" text="Budget:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="budgetTextField" layoutX="422.0" layoutY="132.0" prefHeight="25.0" prefWidth="314.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <DatePicker fx:id="startDate" layoutX="183.0" layoutY="72.0" />
+            <Label fx:id="usernameLabel111112" layoutX="422.0" layoutY="55.0" prefHeight="59.0" prefWidth="119.0" text="End Date:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="endDate" layoutX="562.0" layoutY="72.0" />
+            <ListView fx:id="technologiesListView" layoutX="192.0" layoutY="265.0" prefHeight="249.0" prefWidth="544.0">
+               <effect>
+                  <InnerShadow />
+               </effect></ListView>
+            <Label fx:id="usernameLabel1111111" layoutX="40.0" layoutY="175.0" prefHeight="59.0" prefWidth="182.0" text="Technology:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="technologyTextField" layoutX="192.0" layoutY="192.0" prefHeight="25.0" prefWidth="544.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Label fx:id="usernameLabel11111111" layoutX="40.0" layoutY="235.0" prefHeight="59.0" prefWidth="155.0" text="Technologies:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="addTechnologyButton" layoutX="464.0" layoutY="540.0" mnemonicParsing="false" onAction="#addTechnologyPressed" prefHeight="22.0" prefWidth="132.0" text="Add Technology">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="estimationPane" layoutX="1000.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Label fx:id="EstimateResourceAllocationPane1" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="338.0" text="Estimation Result:" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="backFromEstimationResultIcon" fitHeight="50.0" fitWidth="50.0" layoutX="9.0" layoutY="515.0" onMouseClicked="#backFromEstimationResultPressed" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/back.png" />
+               </image>
+            </ImageView>
+            <TreeView fx:id="infornationResourcesTreeView" layoutX="40.0" layoutY="69.0" prefHeight="426.0" prefWidth="680.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

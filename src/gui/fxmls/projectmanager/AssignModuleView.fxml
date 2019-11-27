@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.projectmanager.AssignModuleView">
+   <children>
+      <AnchorPane fx:id="moduleAssignmentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Button fx:id="getModulesAndProgrammersButton" layoutX="529.0" layoutY="540.0" mnemonicParsing="false" onAction="#getModulesAndProgrammersPressed" prefHeight="22.0" prefWidth="211.0" text="Get Modules and Programmers">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="EstimateResourceAllocationPane11" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="338.0" text="Assign Module:" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <ListView fx:id="projectsListView" layoutX="38.0" layoutY="133.0" prefHeight="367.0" prefWidth="680.0" />
+            <Label fx:id="usernameLabel111113" layoutX="40.0" layoutY="60.0" prefHeight="59.0" prefWidth="168.0" text="Select a Project:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="assignPane" layoutX="1000.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Button fx:id="ModuleAssignButton" layoutX="636.0" layoutY="540.0" mnemonicParsing="false" onAction="#assignModulePressed" prefHeight="22.0" prefWidth="104.0" text="Assign">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="EstimateResourceAllocationPane111" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="338.0" text="Assign Module:" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <ListView fx:id="programmersListView" layoutX="40.0" layoutY="125.0" prefHeight="367.0" prefWidth="304.0" />
+            <Label fx:id="usernameLabel1111131" layoutX="40.0" layoutY="60.0" prefHeight="59.0" prefWidth="227.0" text="Select a Programmer:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="userel11111311" layoutX="375.0" layoutY="60.0" prefHeight="59.0" prefWidth="227.0" text="Select a Module:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <ListView fx:id="modulesListView" layoutX="375.0" layoutY="125.0" prefHeight="367.0" prefWidth="304.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

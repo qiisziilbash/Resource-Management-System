@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="moduleCreationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.programmer.ModuleCreationView">
+   <children>
+      <Button fx:id="moduleCreationButton" layoutX="660.0" layoutY="540.0" mnemonicParsing="false" onAction="#createModulePressed" prefHeight="22.0" prefWidth="80.0" text="Create">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="modulesCombo" layoutX="250.0" layoutY="75.0" prefHeight="25.0" prefWidth="449.0" />
+      <Label fx:id="usernasfhzsmeLabel1" layoutX="40.0" layoutY="55.0" prefHeight="59.0" prefWidth="176.0" text="Select a module:">
+         <effect>
+            <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLab11" layoutX="40.0" layoutY="115.0" prefHeight="59.0" prefWidth="166.0" text="Start date:">
+         <effect>
+            <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLshzhabel111" layoutX="40.0" layoutY="175.0" prefHeight="59.0" prefWidth="176.0" text="Add description:">
+         <effect>
+            <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="moduleDescriptionTextArea" layoutX="240.0" layoutY="205.0" prefHeight="287.0" prefWidth="459.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextArea>
+      <Label fx:id="usernameLabel21" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="338.0" text="Module Creation Registeration" textFill="#bf1c1c">
+         <effect>
+            <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startDate" layoutX="183.0" layoutY="132.0" prefHeight="25.0" prefWidth="176.0" />
+      <Label fx:id="usernameLab111" layoutX="394.0" layoutY="115.0" prefHeight="59.0" prefWidth="130.0" text="End date:">
+         <effect>
+            <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="endDate" layoutX="524.0" layoutY="132.0" prefHeight="25.0" prefWidth="176.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.resourcemanager.RegisterNewResourceView">
+   <children>
+      <AnchorPane fx:id="registerNewResourcePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Button fx:id="registerResourceButton" layoutX="643.0" layoutY="540.0" mnemonicParsing="false" onAction="#registerResource" prefHeight="22.0" prefWidth="97.0" text="Register">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="resourceTypeCombo" layoutX="250.0" layoutY="75.0" onAction="#resourceTypeChanged" prefHeight="25.0" prefWidth="449.0" />
+            <Label fx:id="usernashszfhmeLabel2" layoutX="40.0" layoutY="55.0" prefHeight="59.0" prefWidth="176.0" text="Type:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="userabel1" layoutX="40.0" layoutY="115.0" prefHeight="59.0" prefWidth="166.0" text="Name:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="resourceNameTextField" layoutX="250.0" layoutY="132.0" prefHeight="25.0" prefWidth="449.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Label fx:id="username11" layoutX="40.0" layoutY="175.0" prefHeight="59.0" prefWidth="190.0" text="Unique identifier:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel22" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="338.0" text="New Resource Registeration" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idTextField" layoutX="250.0" layoutY="192.0" prefHeight="25.0" prefWidth="449.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Label fx:id="specificationLabel" layoutX="40.0" layoutY="235.0" prefHeight="59.0" prefWidth="190.0" text="Specification:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="valueLabel" layoutX="431.0" layoutY="235.0" prefHeight="59.0" prefWidth="66.0" text="Value:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="specificationTextField" layoutX="251.0" layoutY="252.0" prefHeight="25.0" prefWidth="155.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Button fx:id="addSpecificationButton" layoutX="497.0" layoutY="540.0" mnemonicParsing="false" onAction="#addSpecification" prefHeight="22.0" prefWidth="132.0" text="Add Specification">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="valueTextField" layoutX="541.0" layoutY="252.0" prefHeight="25.0" prefWidth="155.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <ListView fx:id="specListView" layoutX="250.0" layoutY="294.0" prefHeight="200.0" prefWidth="449.0" />
+            <TextField fx:id="creditTestField" layoutX="251.0" layoutY="252.0" prefHeight="25.0" prefWidth="155.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <Label fx:id="creditLabel" layoutX="40.0" layoutY="235.0" prefHeight="59.0" prefWidth="190.0" text="Credit:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

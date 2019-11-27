@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.resourcemanager.FlowReportview">
+   <children>
+      <AnchorPane fx:id="resourceFlowReportPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Button fx:id="getFlowReportButton2" layoutX="519.0" layoutY="540.0" mnemonicParsing="false" onAction="#viewDiagramPressed" prefHeight="22.0" prefWidth="107.0" text="View Diagram">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="getFlowReportButton" layoutX="633.0" layoutY="540.0" mnemonicParsing="false" onAction="#getFlowReportPressed" prefHeight="22.0" prefWidth="107.0" text="Get Report">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="12.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="resourceTypeCombo" layoutX="250.0" layoutY="75.0" onAction="#resourceTypeComboChanged" prefHeight="25.0" prefWidth="449.0" />
+            <Label fx:id="usernameLabel11" layoutX="40.0" layoutY="55.0" prefHeight="59.0" prefWidth="176.0" text="Type:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel111" layoutX="40.0" layoutY="115.0" prefHeight="59.0" prefWidth="166.0" text="Name:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel1112" layoutX="40.0" layoutY="225.0" prefHeight="59.0" prefWidth="190.0" text="From:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel211" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="367.0" text="Resource Allocations Flow Report" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="resourceNameCombo" layoutX="250.0" layoutY="132.0" onAction="#resourceNameComboChanged" prefHeight="25.0" prefWidth="449.0" />
+            <Label fx:id="usernameLabel1111" layoutX="407.0" layoutY="225.0" prefHeight="59.0" prefWidth="190.0" text="To:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="fromDate" layoutX="201.0" layoutY="242.0" />
+            <DatePicker fx:id="toDate" layoutX="525.0" layoutY="242.0" />
+            <TableView fx:id="resultTable" layoutX="35.0" layoutY="296.0" prefHeight="226.0" prefWidth="666.0" />
+            <ComboBox fx:id="resourcesCombo" layoutX="250.0" layoutY="187.0" prefHeight="25.0" prefWidth="449.0" />
+            <Label fx:id="usernameLabel1113" layoutX="40.0" layoutY="170.0" prefHeight="59.0" prefWidth="166.0" text="Resources:">
+               <effect>
+                  <InnerShadow choke="0.29" color="#ff7600" height="115.89" radius="58.1225" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="diagramPane" layoutX="1000.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0">
+         <children>
+            <Label fx:id="usernameLabel2111" layoutX="40.0" layoutY="10.0" prefHeight="59.0" prefWidth="367.0" text="Diagram" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="515.0" onMouseClicked="#backFromDiagram" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/back.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="sampleRect" arcHeight="50.0" arcWidth="50.0" fill="#39ff1f42" height="22.0" layoutX="289.0" layoutY="176.0" opacity="0.76" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="200.0">
+               <effect>
+                  <InnerShadow color="#35d115" />
+               </effect>
+            </Rectangle>
+            <Line fx:id="sampleLine" endX="650.0" fill="#f2040400" layoutX="50.0" layoutY="250.0" stroke="RED" />
+            <Label fx:id="usernameLabel21111" layoutX="308.0" layoutY="288.0" prefHeight="59.0" prefWidth="135.0" text="Time (Day)" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="50.0" endY="275.0" startX="50.0" startY="225.0" stroke="#2bff00" strokeWidth="5.0" />
+            <Line endX="50.0" endY="275.0" layoutX="650.0" startX="50.0" startY="225.0" stroke="#2bff00" strokeWidth="5.0" />
+            <Label fx:id="startLabel" layoutX="25.0" layoutY="288.0" prefHeight="59.0" prefWidth="101.0" text="date" textAlignment="CENTER" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="endLabel" layoutX="654.0" layoutY="288.0" prefHeight="59.0" prefWidth="87.0" text="date" textAlignment="CENTER" textFill="#bf1c1c">
+               <effect>
+                  <InnerShadow choke="0.29" color="#00ff00" height="117.25" radius="58.4625" width="118.6" />
+               </effect>
+               <font>
+                  <Font name="Cooper Black" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
